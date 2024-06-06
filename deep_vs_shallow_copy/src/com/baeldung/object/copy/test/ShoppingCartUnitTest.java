@@ -72,4 +72,5 @@ class ShoppingCartUnitTest {
     ObjectCopyUtils getObjectCopyUtils() {
         return new ObjectCopyUtils();
     }
+
 }

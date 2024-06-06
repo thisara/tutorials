@@ -14,15 +14,15 @@ public class Main {
         items.add("Bread");
 
         shoppingCart.setItems(items);
-        shoppingCart.setCartName("InitialShoppingCart");
+        shoppingCart.setCartName("InitializeShoppingCart");
 
-        print("Initial Shopping Cart :----------------------------");
-        print(String.format("> Initial Shopping Cart : %s", shoppingCart));
+        print("Initialise Shopping Cart:...");
+        print(String.format("> Initialized Shopping Cart : %s", shoppingCart));
 
         ObjectCopyUtils objectCopyUtils = new ObjectCopyUtils();
 
         /* Deep Copy ShoppingCart */
-        System.out.println("Deep Copy Of Shopping Cart:------------------------------------------");
+        System.out.println("Deep Copy Of Shopping Cart:...");
 
         ShoppingCart deepCopy = objectCopyUtils.deepCopy(shoppingCart);
 
@@ -30,11 +30,11 @@ public class Main {
         deepCopy.getItems()
             .add("Cheese");
 
-        print("> Initial Shopping Cart : " + shoppingCart);
-        print("> Deep Copy : " + deepCopy);
+        print("-> Initial Shopping Cart : " + shoppingCart);
+        print("-> Deep Copy of Shopping Cart : " + deepCopy);
 
         /* Deep Copy By Cloning ShoppingCart */
-        print("Deep Copy Of Shopping Cart By Cloning :------------------------------------------");
+        print("Deep Copy Of Shopping Cart By Cloning:...");
 
         ShoppingCart deepCopyByClone = objectCopyUtils.deepCopyByClone(shoppingCart);
 
@@ -42,11 +42,11 @@ public class Main {
         deepCopyByClone.getItems()
             .add("Apple");
 
-        print(String.format("> Initial Shopping Cart : %s", shoppingCart));
-        print(String.format("> Deep Copy : %s", deepCopyByClone));
+        print(String.format("-> Initial Shopping Cart : %s", shoppingCart));
+        print(String.format("-> Deep Copy By Cloning : %s", deepCopyByClone));
 
         /* Shallow Copy ShoppingCart */
-        print("Shallow Copy Of Shopping Cart :----------------------------------------");
+        print("Shallow Copy Of Shopping Cart:...");
 
         ShoppingCart shallowCopy = objectCopyUtils.shallowCopy(shoppingCart);
 
@@ -54,8 +54,8 @@ public class Main {
         shallowCopy.getItems()
             .add("Butter");
 
-        print(String.format("> Initial Shopping Cart : %s", shoppingCart));
-        print(String.format("> Shallow Copy : %s", shallowCopy));
+        print(String.format("-> Initial Shopping Cart : %s", shoppingCart));
+        print(String.format("-> Shallow Copy : %s", shallowCopy));
 
     }
 
