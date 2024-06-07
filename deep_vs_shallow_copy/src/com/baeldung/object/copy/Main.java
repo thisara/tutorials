@@ -14,7 +14,7 @@ public class Main {
         items.add("Bread");
 
         shoppingCart.setItems(items);
-        shoppingCart.setCartName("InitializeShoppingCart");
+        shoppingCart.setCartName("MyCart");
 
         print("Initialise Shopping Cart:...");
         print(String.format("> Initialized Shopping Cart : %s", shoppingCart));
@@ -26,19 +26,19 @@ public class Main {
 
         ShoppingCart deepCopy = objectCopyUtils.deepCopy(shoppingCart);
 
-        deepCopy.setCartName("AfterDeepCopyShoppingCart");
+        deepCopy.setCartName("MyCartWithDeepCopy");
         deepCopy.getItems()
             .add("Cheese");
 
-        print("-> Initial Shopping Cart : " + shoppingCart);
-        print("-> Deep Copy of Shopping Cart : " + deepCopy);
+        print(String.format("-> Initial Shopping Cart : %s", shoppingCart));
+        print(String.format("-> Deep Copy of Shopping Cart : %s", deepCopy));
 
         /* Deep Copy By Cloning ShoppingCart */
         print("Deep Copy Of Shopping Cart By Cloning:...");
 
         ShoppingCart deepCopyByClone = objectCopyUtils.deepCopyByClone(shoppingCart);
 
-        deepCopyByClone.setCartName("AfterDeepCopyCloneShoppingCart");
+        deepCopyByClone.setCartName("MyCartWithDeepCopyClone");
         deepCopyByClone.getItems()
             .add("Apple");
 
@@ -50,7 +50,7 @@ public class Main {
 
         ShoppingCart shallowCopy = objectCopyUtils.shallowCopy(shoppingCart);
 
-        shallowCopy.setCartName("AfterShallowCopyShoppingCart");
+        shallowCopy.setCartName("MyCartWithShallowCopy");
         shallowCopy.getItems()
             .add("Butter");
 

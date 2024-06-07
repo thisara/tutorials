@@ -9,8 +9,6 @@ public class ObjectCopyUtils {
 
         ShoppingCart shallowCopyOfObject = shoppingCart;
 
-        shallowCopyOfObject.setCartName("ShallowCopyCart");
-
         return shallowCopyOfObject;
     }
 
@@ -24,26 +22,20 @@ public class ObjectCopyUtils {
             .stream()
             .forEach(t -> itemList.add(t));
 
-        deepCopyOfObject.setCartName("DeepCopyCart");
         deepCopyOfObject.setItems(itemList);
 
         return deepCopyOfObject;
     }
 
+    @SuppressWarnings("unchecked")
     public ShoppingCart deepCopyByClone(ShoppingCart shoppingCart) throws CloneNotSupportedException {
 
         ShoppingCart deepCopyOfObject = (ShoppingCart) shoppingCart.clone();
+        
+        ArrayList<String> itemsList = (ArrayList<String>) shoppingCart.getItems();
 
-        List<String> itemList = new ArrayList<String>();
-
-        shoppingCart.getItems()
-            .stream()
-            .forEach(item -> itemList.add(item));
-
-        deepCopyOfObject.setCartName("DeepCopyCart");
-        deepCopyOfObject.setItems(itemList);
-
+        deepCopyOfObject.setItems((ArrayList<String>)itemsList.clone());
+        
         return deepCopyOfObject;
     }
-
 }
