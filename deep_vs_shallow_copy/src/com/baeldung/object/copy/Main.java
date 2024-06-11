@@ -14,7 +14,7 @@ public class Main {
 
         print(String.format("Source Shopping Cart : %s", sourceShoppingCart));
 
-        /* Shallow Copy ShoppingCart */
+        /* Shallow Copy of ShoppingCart */
         print("Shallow Copy Of Shopping Cart:...");
 
         sourceShoppingCart = new ShoppingCart("MyCart", new ArrayList<String>(List.of("Bread")));
@@ -24,7 +24,7 @@ public class Main {
         print(String.format("Source Shopping Cart : %s", sourceShoppingCart));
         print(String.format("Shallow Copy of Shopping Cart : %s", shallowCopy));
         
-        /* Deep Copy ShoppingCart */
+        /* Deep Copy of ShoppingCart */
         System.out.println("Deep Copy Of Shopping Cart:...");
 
         sourceShoppingCart = new ShoppingCart("MyCart", new ArrayList<String>(List.of("Bread")));
@@ -34,7 +34,7 @@ public class Main {
         print(String.format("Source Shopping Cart : %s", sourceShoppingCart));
         print(String.format("Deep Copy of Shopping Cart : %s", deepCopy));
 
-        /* Copy By Cloning ShoppingCart */
+        /* Cloning ShoppingCart */
         print("Copy Of Shopping Cart By Cloning:...");
 
         sourceShoppingCart = new ShoppingCart("MyCart", new ArrayList<String>(List.of("Bread")));
@@ -44,7 +44,7 @@ public class Main {
         print(String.format("Source Shopping Cart : %s", sourceShoppingCart));
         print(String.format("Clone of Shopping Cart : %s", cloneCopy));
 
-        /* Deep Copy By Cloning ShoppingCart */
+        /* Cloning with Deep Copy of ShoppingCart */
         print("Deep Clone Copy Of Shopping Cart By Cloning:...");
 
         sourceShoppingCart = new ShoppingCart("MyCart", new ArrayList<String>(List.of("Bread")));
